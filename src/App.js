@@ -1,23 +1,20 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePages from './components/pages/home-pages/HomePages';
+
 import './App.css';
 
-const { default: Navbar } = require("./components/Navbar/Navbar");
-const { default: About } = require("./components/about/About");
-const { default: Objective } = require("./components/objective/Objective");
-const { default: Lecture } = require("./components/lecture/Lecture");
-const { default: Uploading } = require("./components/Upload/Uploading");
-const { default: Footer } = require("./components/footer/Footer");
 
 
 
 function App() {
   return (
     <div className='app'>
-      <Navbar />
-      <About />
-      <Objective />
-      <Lecture />
-      <Uploading />
-      <Footer />
+      <Router>
+      <Switch>
+      <Route exact path="/" component={HomePages} />
+      </Switch>
+      </Router>
     </div>
   );
 }

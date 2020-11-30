@@ -5,17 +5,29 @@ import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+  },
+  link: {
+    color: '#000',
+  },
+  white: {
+    backgroundColor: '#fff',
   },
 }));
 
 export default function NavTab({ child1, child2, child3 }) {
   const classes = useStyles();
+  const location = useLocation();
+  const [title, setTitle] = React.useState('');
+  const pathname = location.pathname;
   const [value, setValue] = React.useState('1');
+  React.useEffect(() => {
+    setTitle(pathname.replace('/', ''));
+  }, [pathname]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -23,19 +35,23 @@ export default function NavTab({ child1, child2, child3 }) {
 
   return (
     <div className={classes.root}>
-      <TabContext value={value}>
-        <AppBar position="static">
+      <TabContext value={title}>
+        <AppBar className={classes.white} position="static">
           <TabList onChange={handleChange} aria-label="simple tabs example">
-            <a href="/lecturenotes">
-              <Tab label="Lecture Notes" value="1" />
+            <a href="/lecturenotes" className={classes.link}>
+              <Tab label="Lecture Notes" value="lecturenotes" />
             </a>
-            <Tab label="Past Questions" value="2" />
-            <Tab label="Project Material" value="3" />
+            <a href="/pastquestions" className={classes.link}>
+              <Tab label="Past Questions" value="pastquestions" />
+            </a>
+            <a href="/projectmaterial" className={classes.link}>
+              <Tab label="Project Material" value="3" />
+            </a>
           </TabList>
         </AppBar>
-        <TabPanel value="1">{child1}</TabPanel>
-        <TabPanel value="2">{child2}</TabPanel>
-        <TabPanel value="3">{child3}</TabPanel>
+        <TabPanel value="lecturenotes">{child1}</TabPanel>
+        <TabPanel value="pastquestions">{child2}</TabPanel>
+        <TabPanel value="projectmaterial">{child3}</TabPanel>
       </TabContext>
     </div>
   );

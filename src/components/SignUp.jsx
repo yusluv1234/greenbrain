@@ -70,7 +70,7 @@ export default function SignUp() {
       )}
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
-          <label>Parent Email</label>
+          <label>Email</label>
           <input
             className="form-control"
             type="email"
@@ -90,7 +90,7 @@ export default function SignUp() {
           />
         </div>
         <div className="form-group">
-          <p>Student name</p>
+          <p>Name</p>
           <div className="form-inline">
             <div className="form-with-label">
               <input

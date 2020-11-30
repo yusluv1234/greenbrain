@@ -1,6 +1,7 @@
 import React from 'react';
 import DoneIcon from '@material-ui/icons/Done';
 import Hero from '../../assets/hero_image.png';
+import CustomButton from '../custom-button/CustomButton';
 
 import './about.css';
 
@@ -35,11 +36,14 @@ const About = () => {
                         <div className='text-'>Grow your network: Connect with <br />  Students from other Univeristies Start Here</div>
                     </div>
                 </ul>
+                <div className='about-button'>
+                    <CustomButton name='Start Here' />
+                </div>
             </div>
                 <div className='book-'>
                     <img src={Hero} className='hero-image' alt='hero' />
                 </div>
-
+            
         </div>
     )
 }

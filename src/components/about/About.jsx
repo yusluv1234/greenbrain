@@ -40,7 +40,7 @@ const About = () => {
                     <CustomButton name='Start Here' />
                 </div>
             </div>
-                <div className='book-'>
+                <div className='book-' >
                     <img src={Hero} className='hero-image' alt='hero' />
                 </div>
             

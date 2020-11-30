@@ -116,8 +116,8 @@ const Navbar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>SignIn</MenuItem>
-      <MenuItem onClick={handleMenuClose}>SignUp</MenuItem>
+      <MenuItem onClick={handleMenuClose}><a href='/signin'>SignIn</a></MenuItem>
+      <MenuItem onClick={handleMenuClose}><a href='/signup'>SignUp</a></MenuItem>
     </Menu>
   );
 

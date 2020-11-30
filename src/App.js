@@ -4,18 +4,20 @@ import HomePages from './components/pages/home-pages/HomePages';
 import SigninPages from './components/pages/sign-in-pages/SigninPages';
 
 import './App.css';
-
-
-
+import LectureNotePages from './components/pages/lecture-note-pages/LectureNotePages';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <Router>
-      <Switch>
-      <Route exact path="/" component={HomePages} />
-      <Route path="/signIn" component={SigninPages} />
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={HomePages} />
+          <Route path="/lecturenotes" component={LectureNotePages} />
+          <Route path="/pastquestions" component={LectureNotePages} />
+          <Route path="/projectmaterial" component={LectureNotePages} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
       </Router>
     </div>
   );

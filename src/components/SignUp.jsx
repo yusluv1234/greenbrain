@@ -70,43 +70,6 @@ export default function SignUp() {
       )}
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
-          <p>Parent name</p>
-          <div className="form-inline">
-            <div className="form-with-label">
-              <input
-                value={parentName.firstname}
-                onChange={(e) =>
-                  setParentName({
-                    ...parentName,
-                    firstname: e.currentTarget.value,
-                  })
-                }
-                type="name"
-                className="form-control "
-                placeholder="first name"
-                name="parent-firstname"
-              />
-              <label htmlFor="parent-firstname"> first name</label>
-            </div>
-            <div className="form-with-label">
-              <input
-                type="name"
-                className="form-control"
-                placeholder="last name"
-                name="parent-lastname"
-                value={parentName.lastname}
-                onChange={(e) =>
-                  setParentName({
-                    ...parentName,
-                    lastname: e.currentTarget.value,
-                  })
-                }
-              />
-              <label htmlFor="parent-lastname">last name</label>
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
           <label>Parent Email</label>
           <input
             className="form-control"

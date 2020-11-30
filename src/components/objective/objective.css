@@ -1,6 +1,6 @@
 .objective {
     background-color: #E4F9F5;
-    padding: 0 20%;
+    padding: 0 10%;
 
 }
 
@@ -9,4 +9,32 @@
     grid-template-columns: 1fr 1fr;
     padding: 40px 0;
     grid-gap: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .objective {
+        background-color: #E4F9F5;
+        padding: 0 10%;
+    
+    }
+    
+    .object_items {
+        display: inline!important;
+        padding: 40px 0 !important;
+        grid-gap: 20px !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .objective {
+        background-color: #E4F9F5;
+        padding: 0 10%;
+    
+    }
+    
+    .object_items {
+        display: inline!important;
+        padding: 40px 0;
+        grid-gap: 20px;
+    }
 }

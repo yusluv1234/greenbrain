@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './../../Navbar/Navbar';
 import Footer from './../../footer/Footer';
-import NavTab from './../../ui/Tabs';
+import NavTab from '../../ui/Tabs';
 import LectureCards from '../../lecture-cards/LectureCards';
 import styled, { css } from 'styled-components';
 import randomColor from 'randomcolor';

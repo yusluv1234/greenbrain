@@ -17,6 +17,32 @@
 }
 
 .uploading-button {
-    margin: 130px 0 0 90px;   
+    margin: 100px 0 0 90px;
+    padding-bottom: 20px;  
 
+}
+
+@media screen and (max-width: 650px) {
+    .uploading {
+        justify-content: center;
+        display: inline;
+        width: 100%;
+        height: 20rem;
+        background-color: #E4F9F5;
+    }
+    
+    /* .uploading-icon {
+        margin: 50px 0 0 90px;
+    }
+    
+    .uploading-text {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 90px 0 0 60px;   
+    } */
+/*     
+    .uploading-button {
+        margin: 130px 0 0 90px;   
+    
+    } */
 }

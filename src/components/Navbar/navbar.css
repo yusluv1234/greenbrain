@@ -1,0 +1,20 @@
+.navbar {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+}
+
+.nav-logo {
+    margin-left: 60px;
+    font-size: 26px;
+}
+
+.inpute {
+    width: 35%;
+    margin-left: 20%;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 24px;
+    color:#fff;
+}

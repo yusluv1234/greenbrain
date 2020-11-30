@@ -5,7 +5,7 @@ import './customButton.css';
 const CustomButton = props => {
     return (
         <div className='custom-button'>
-            <div className='button-title'>{props.name}</div>
+            <a  href="/lecturenotes" className='button-title'>{props.name}</a>
         </div>
     )
 }

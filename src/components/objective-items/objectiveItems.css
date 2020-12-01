@@ -37,14 +37,14 @@
     
     .item-logo {
         justify-content: center;
-        padding: 30px 0 10px 40px;
+        padding: 20px 0 10px 40px;
     }
     
     .item-title {
         font-size: 20px;
         font-weight: bold;
         margin: auto 10%;
-        padding-bottom: 15px;
+        padding-bottom: 6px;
     }
     
     .item-text {

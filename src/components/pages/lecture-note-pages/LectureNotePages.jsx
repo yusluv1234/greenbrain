@@ -1,11 +1,11 @@
-import React from 'react';
-import Navbar from './../../Navbar/Navbar';
-import Footer from './../../footer/Footer';
-import NavTab from '../../ui/Tabs';
-import LectureCards from '../../lecture-cards/LectureCards';
-import styled, { css } from 'styled-components';
-import randomColor from 'randomcolor';
-import { LectureCardsContainer } from './../../lecture-cards/LectureCards';
+import React from "react";
+import Navbar from "./../../Navbar/Navbar";
+import Footer from "./../../footer/Footer";
+import NavTab from "../../ui/Tabs";
+import LectureCards from "../../lecture-cards/LectureCards";
+import styled, { css } from "styled-components";
+import randomColor from "randomcolor";
+import { LectureCardsContainer } from "./../../lecture-cards/LectureCards";
 
 const LectureNotePages = () => {
   return (
@@ -21,27 +21,27 @@ const LectureNotePages = () => {
   );
 };
 
-// const CardWrapper = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-gap: 1rem;
-//   @media (max-width: 768px) {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-//   ${(props) =>
-//     props.type === 'project' &&
-//     css`
-//       grid-template-columns: repeat(3, 1fr);
-//       @media (max-width: 768px) {
-//         grid-template-columns: repeat(2, 1fr);
-//       }
-//     `}
-// `;
+const CardWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ${(props) =>
+    props.type === "project" &&
+    css`
+      grid-template-columns: repeat(3, 1fr);
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    `}
+`;
 
 const color = randomColor({
   count: 25,
-  luminosity: 'random',
-  hue: 'random',
+  luminosity: "random",
+  hue: "random",
 });
 
 const LectureNoteCard = () => (
@@ -55,7 +55,7 @@ const LectureNoteCard = () => (
 const NoteCard = () => (
   <CardWrapper>
     {color.map((item, index) => (
-      <LectureCards key={index} data={{ session: '2012/2013' }} color={item} />
+      <LectureCards key={index} data={{ session: "2012/2013" }} color={item} />
     ))}
   </CardWrapper>
 );
@@ -88,8 +88,8 @@ const ProjectCard = () => (
   </LectureCardsContainer>
 );
 const List = () => (
-  <li style={{ fontSize: '.9rem' }}>
-    <span style={{ fontWeight: 'bolder', paddingRight: '.3rem' }}>course:</span>
+  <li style={{ fontSize: ".9rem" }}>
+    <span style={{ fontWeight: "bolder", paddingRight: ".3rem" }}>course:</span>
     history
   </li>
 );

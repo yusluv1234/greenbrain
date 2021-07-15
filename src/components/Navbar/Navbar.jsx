@@ -195,7 +195,7 @@ const Navbar = () => {
               </Badge>
             </IconButton>
             <IconButton
-              edge="end"
+              edge="end" 
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
